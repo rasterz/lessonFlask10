@@ -42,15 +42,15 @@ def page_index():
         """
 
 
-@app.route("/candidate/")
-def page_main():
+@app.route("/candidate/<int:x>")
+def page_main(x):
     return f"""
-    <img src='{templates[1]['picture']}'>
+    <img src='{templates[x]['picture']}'>
     <pre>
     
-    Имя кандидата - {templates[1]['name']}\n
-    Позиция кандидата - {templates[1]['position']}\n
-    Навыки через запятую - {templates[1]['skills']}\n 
+    Имя кандидата - {templates[x - 1]['name']}\n
+    Позиция кандидата - {templates[x - 1]['position']}\n
+    Навыки через запятую - {templates[x - 1]['skills']}\n 
     
     </pre>
     """
