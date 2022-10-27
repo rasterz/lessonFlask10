@@ -1,7 +1,7 @@
 # flask app
 
 from flask import Flask
-from functions import get_by_pk, get_all, get_by_skill, templates, get_position, load_candidates
+from utils import get_by_pk, get_all, get_by_skill, templates, get_position, load_candidates
 
 app = Flask(__name__)
 
